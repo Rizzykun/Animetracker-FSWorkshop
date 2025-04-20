@@ -27,7 +27,7 @@ jobs:
     - name: Deploy to server
       uses: appleboy/scp-action@v0.1.7
       with:
-        host: 122.199.159.142
+        host: 128.199.159.142
         username: root
         password: MFSH@1234A
         port: 22
