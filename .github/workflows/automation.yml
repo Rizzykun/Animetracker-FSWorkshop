@@ -29,7 +29,7 @@ jobs:
       with:
         host: 122.199.159.142
         username: root
-        key: MFSH@1234A
+        password: MFSH@1234A
         port: 22
         source: "dist/" # The source directory to transfer
         target: "/var/www/html/animetracker" # The destination path on your server
