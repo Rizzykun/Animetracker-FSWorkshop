@@ -10,7 +10,7 @@ jobs:
    
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
      
     - name: Setup Node.js
       uses: actions/setup-node@v3
@@ -19,17 +19,17 @@ jobs:
         cache: 'npm'
        
     - name: Install dependencies
-      run: npm ci
+      run: npm i
      
     - name: Build project
       run: npm run build
      
     - name: Deploy to server
-      uses: appleboy/scp-action@v0.1.4
+      uses: appleboy/scp-action@v0.1.7
       with:
         host: 122.199.159.142
         username: root
         key: MFSH@1234A
         port: 22
         source: "dist/" # The source directory to transfer
-        target: "/path/on/your/server" # The destination path on your server
+        target: "/var/www/html/animetracker" # The destination path on your server
