@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Web Page</title>
+    </head>
+    <body>
+        <style> 
+            #first-heading {
+                color: rgb(44, 209, 7);
+                text-align: center;
+                margin: auto;
+            }
+        </style>
+        <h1 id="first-heading">Welcome to My Web Page</h1>
+        <h2 id="counter">0</h2>
+        <button>Increment</button>
+        <p>This is a simple web page created using HTML and CSS.</p>
+        <ul>
+            <li> Item A</li>
+            <li> Item B</li>
+        </ul>
+        <a href="https://www.google.com">Visit Google</a>
+        <table style="width:100%; border: 1px solid black; border-collapse: collapse;">
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+            </tr>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+            </tr>
+        </table>
+        <script src="./workshop.js">
+            console.log("Hello, World!");
+        </script>
+        <script>
+            let number = 0;
+            let element = document.getElementById("counter");
+            element.innerHTML = "Don't click the button!";
+            element.style.color = "red";
+
+            function increment() {
+                number += 1;
+                element.innerHTML = number;
+            }
+            let button = document.querySelector("button");
+            button.addEventListener("click", increment);
+            console.log("Button clicked!");
+        </script>
+    </body>
+</html>
