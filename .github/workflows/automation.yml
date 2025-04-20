@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches: [ main ] # Change to your main branch name
-    
+  workflow_dispatch: # Allows manual triggering of the workflow
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
